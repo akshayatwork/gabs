@@ -705,7 +705,7 @@ func walkObject(path string, obj map[string]interface{}, flat map[string]interfa
 	}
 	for elePath, v := range obj {
 		if len(path) > 0 {
-			elePath = path + "." + elePath
+			elePath = path + "_" + elePath
 		}
 		switch t := v.(type) {
 		case map[string]interface{}:
